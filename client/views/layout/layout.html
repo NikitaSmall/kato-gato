@@ -1,7 +1,13 @@
 <template name="layout">
   <body>
-    Hello, Nikita!
-
-    {{> yield}}
+    {{> header}}
+    {{#if currentUser}}
+      <div class="col-md-8">
+        {{> yield}}
+      </div>
+      <div class="col-md-4">
+        {{> roomsList}}
+      </div>
+    {{/if}}
   </body>
 </template>
