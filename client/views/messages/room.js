@@ -21,3 +21,7 @@ Template.room.events({
     });
   }
 });
+
+Template.messageItem.rendered = function () {
+  $('#chat_front').scrollTop($('#chat_front')[0].scrollHeight);
+};
