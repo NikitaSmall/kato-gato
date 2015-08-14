@@ -30,9 +30,9 @@ body {
   height: 82.6%;
 }
 
-.room .page-footer {
-  position: absolute;
-  bottom: 10%;
+.media-list {
+  overflow-y: auto;
+  height: 100%;
 }
 
 .page {

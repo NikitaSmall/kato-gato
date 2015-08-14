@@ -1,3 +1,23 @@
 <template name="roomsList">
-  room list!
+  <div class="panel panel-primary room">
+    <div class="panel-heading">
+       Список комнат
+    </div>
+    <div class="panel-body">
+      <ul class="media-list">
+        {{#each rooms}}
+          {{> roomItem}}
+        {{else}}
+          <div class="media">
+            <div class="media-body">
+            There is no any rooms for now
+            </div>
+            <br />
+            <small class="text-muted">Create new room at the left side of header</small>
+          </div>
+        {{/each}}
+
+      </ul>
+    </div>
+  </div>
 </template>
