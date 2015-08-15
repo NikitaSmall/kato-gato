@@ -2,16 +2,7 @@
   <body>
     {{> header}}
     <div class="row main-page">
-      {{#if currentUser}}
-        <div class="col-md-8">
-          {{> yield}}
-        </div>
-        <div class="col-md-4">
-          {{> roomsList}}
-        </div>
-      {{else}}
-          {{> restricted}}
-      {{/if}}
+      {{> yield}}
     </div>
   </body>
 </template>
