@@ -1,8 +1,11 @@
 <template name="notFound">
   <div class="access-denied jumbotron">
-    <h2>Room not found!</h2>
+    <h2>Комната не найдена!</h2>
     {{#with firstRoom}}
-      <p>Try to search another one <a href="{{pathFor 'messageRoom'}}">here</a>. Or create a new one.</p>
+      <p>
+        Попробуйте поискать вот <a href="{{pathFor 'messageRoom'}}">тут</a>.
+        Или просто создайте новую.
+      </p>
     {{/with}}
   </div>
 </template>
