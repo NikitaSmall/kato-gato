@@ -1,6 +1,12 @@
 Template.room.helpers({
   messages: function() {
-    return Messages.find({ roomId: this._id }, {sort: {createAt: 1}});
+    var messageCount = Messages.find({ roomId: this._id }).count();
+    if (messageCount > 50) {
+      return Messages.find({ roomId: this._id }, {sort: {createdAt: 1}, limit: 50, skip: messageCount - 50});
+    } else {
+      return Messages.find({ roomId: this._id }, {sort: {createdAt: 1}, limit: 50});
+    }
+
   }
 });
 
