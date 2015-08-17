@@ -20,6 +20,9 @@
           {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
+            {{#if currentUser}}
+              {{> changeColor}}
+            {{/if}}
             {{> loginButtons}} <!-- here -->
         </ul>
       </div><!-- /.navbar-collapse -->
