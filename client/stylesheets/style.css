@@ -35,6 +35,12 @@ body {
   height: 100%;
 }
 
+.media-body a img {
+  height: 100%;
+  width: auto;
+  max-height: 60vh;
+}
+
 .page {
   position: absolute;
   top: 0px;
