@@ -10,6 +10,7 @@ if (Rooms.find().count() === 0) {
     createdAt: now,
     userId: nikitabig._id,
     author: nikitabig.username,
+    members: [nikitabig._id]
   });
 
   Messages.insert({
