@@ -5,13 +5,8 @@ Accounts.onCreateUser(function(options, user) {
     user.color = ownColor;
 
     // add user to firstRoom
-    var firstRoom = Rooms.find({title: 'Первая комната'});
-
-    if (firstRoom.members === undefined) {
-      firstRoom.members = [];
-    }
+    var firstRoom = Rooms.findOne({title: 'Первая комната'});
     firstRoom.members.push(user._id);
-
     Rooms.update({ _id: firstRoom._id }, { $set: { members: firstRoom.members } });
 
     if (options.profile)
