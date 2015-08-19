@@ -1,7 +1,7 @@
 Template.inviteUser.events({
   "submit form#invite": function(event, template){
     event.preventDefault();
-    
+
     var $username = $(event.target).find('[name=username]');
 
     var invitation = {
@@ -14,6 +14,8 @@ Template.inviteUser.events({
 
       if (result.noRoom) alert('Нет такой комнаты! (что-то пошло не так...)');
       if (result.noUser) alert('Нет такого пользователя! (ищите лучше!)');
+
+      if (result.userAlreadyIn) alert('Такой пользователь уже есть в этой комнате!');
 
       if (result.success)
         $username.val('');
