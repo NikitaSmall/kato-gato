@@ -36,10 +36,20 @@ body {
 }
 
 .media-body a img {
+  display: inline-block;
   height: 100%;
   width: auto;
   max-height: 60vh;
 }
+
+.media-body:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
 
 .page {
   position: absolute;
