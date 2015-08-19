@@ -11,7 +11,7 @@ Template.room.helpers({
 });
 
 Template.room.events({
-  "submit form": function(event, template){
+  "submit form#messages": function(event, template){
     event.preventDefault();
 
     var $content = $(event.target).find('[name=content]');

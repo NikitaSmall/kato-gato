@@ -2,6 +2,7 @@
   <div class="panel panel-info room">
             <div class="panel-heading">
                 {{title}}
+                {{> inviteUser}}
             </div>
             <div class="panel-body chat-panel">
               <ul class="media-list" id="chat_front">
@@ -20,7 +21,7 @@
               </ul>
             </div>
             <div class="panel-footer">
-              <form>
+              <form id="messages">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Введите сообщение" name="content" required="true" />
                     <span class="input-group-btn">
