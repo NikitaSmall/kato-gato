@@ -14,7 +14,6 @@ Template.inviteUser.events({
 
       if (result.noRoom) alert('Нет такой комнаты! (что-то пошло не так...)');
       if (result.noUser) alert('Нет такого пользователя! (ищите лучше!)');
-
       if (result.userAlreadyIn) alert('Такой пользователь уже есть в этой комнате!');
 
       if (result.success)
