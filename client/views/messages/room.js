@@ -30,4 +30,6 @@ Template.room.events({
 
 Template.messageItem.rendered = function () {
   $('#chat_front').scrollTop($('#chat_front')[0].scrollHeight);
+  $('<audio id="chatAudio"><source src="/music/notify.ogg" type="audio/ogg"><source src="/music/notify.mp3" type="audio/mpeg"><source src="/music/notify.wav" type="audio/wav"></audio>').appendTo('body');
+  $('#chatAudio')[0].play();
 };
